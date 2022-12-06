@@ -1,0 +1,213 @@
+:root {
+    --couleur-background: #282c34;
+    --couleur-texte: #e3e7ed;
+    --couleur-texte-bleu: #169fe3;
+    --couleur-background-bouton: #3c3f49;
+    --couleur-background-bouton-select: rgba(22,159,227,0.7);
+    --couleur-background-bouton-hover: #3794c3;
+}
+
+@font-face {
+    font-family: "maximum_impact";
+    src: url(../webfonts/Maximum-Impact.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--couleur-background);
+}
+
+h1 {
+    font-family: "maximum_impact";
+    letter-spacing: 4px;
+    color: var(--couleur-texte);
+    font-size: 1.5em;
+}
+
+h2 {
+    font-size: 1em;
+    color: var(--couleur-texte);
+    font-weight: 100;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h3 {
+    font-size: 2em;
+    color: var(--couleur-texte-bleu);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h4 {
+    font-size: 1.5em;
+    color: var(--couleur-texte);
+    text-align: justify;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h5 {
+    font-size: 1em;
+    color: var(--couleur-texte);
+    font-weight: 100;
+    margin-top: 10;
+    margin-bottom: 0;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    width: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h6 {
+    font-weight: 100;
+    font-size: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5px;
+    box-sizing: border-box;
+    width: 200px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h7 {
+    font-weight: 100;
+    font-size: 1em;
+    box-sizing: content-box;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 3px solid grey;
+    border-radius: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    color: var(--couleur-texte);
+    text-align: justify;
+    margin-top: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+
+.colonnes_container {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 15px;
+    grid-template-areas: 
+        "colonne_gauche colonne_droite";
+}
+
+.grid_items {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.colonne_gauche {
+    grid-area: colonne_gauche;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.liste_livres {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 40px;
+}
+
+/* Boutons ******************************************************************/
+.button_livres {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+}
+
+
+
+.colonne_droite {
+    grid-area: colonne_droite;
+    margin-left: 60px;
+    margin-right: 100px;
+}
+
+/* Styles des icones ***************************************************************************************************/
+.icones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /*display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 20vh 20vh 60vh;
+    grid-template-areas: 
+        "dollar-sign people-carry"
+        "book-open file"
+        "heart heart";
+    */
+    color: var(--couleur-texte);
+
+}
+
+.dollar-sign {
+    display: flex;
+    flex-direction: row;
+    width: 190px;
+}
+.fa-dollar-sign {
+    box-sizing: content-box;
+    font-size: 30px;
+}
+
+.people-carry {
+    display: flex;
+    flex-direction: row;
+    width: 190px;
+}
+.fa-people-carry {
+    box-sizing: content-box;
+    font-size: 30px;
+}
+
+.book-open {
+    display: flex;
+    flex-direction: row;
+    width: 190px;
+}
+.fa-book-open {
+    box-sizing: content-box;
+    font-size: 30px;
+}
+
+.file {
+    display: flex;
+    flex-direction: row;
+    width: 190px;
+}
+.fa-file {
+    box-sizing: content-box;
+    font-size: 30px;
+}
+
+.heart {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    position:relative;
+}
+.fa-heart {
+    position: absolute;
+    color: var(--couleur-texte-bleu);
+    font-size: 1.8em;
+}
+
